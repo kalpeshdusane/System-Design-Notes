@@ -5,9 +5,9 @@ The CAP Theorem serves as a crucial framework for assessing distributed systems.
 
 1. **Consistency:** Same data across all the nodes. When a write occurs, subsequent reads retrieve either the most recent write or an error. For example, synchronous replication ensures consistency in a Master-Replica setup. However, asynchronous replication will lead to inconsistency if the Master confirms a write before receiving confirmation from Replicas; inconsistency might arise if the Replica's write fails.
 
-2. **Availability:** Guaranteeing that every request gets a response, even if it might not contain the latest information. In leaderless replication, any node can fulfill write requests, ensuring read and write operations availability. Or reading stale reads in asynchronous replication.
+3. **Availability:** Guaranteeing that every request gets a response, even if it might not contain the latest information (no error or timeout). In leaderless replication, any node can fulfill write requests, ensuring read and write operations availability. Or reading stale reads in asynchronous replication.
 
-3. **Partition Tolerance:** The system continues to operate despite arbitrary partitioning due to network failures.
+4. **Partition Tolerance:** The system continues to operate despite arbitrary partitioning due to network failures.
 In a distributed system, Nodes are connected via a network. Due to network failure, it will appear as if there is a partition in our system. For example, the system displays partition tolerance if communication breaks between nodes due to a network failure, yet users can still retrieve data.
 
 The CAP Theorem states that in a distributed system, you can only support two of the above guarantees: your system can be CP, AP, or CA, but achieving all three (CAP) is impossible.
@@ -35,3 +35,7 @@ There are two possible scenarios:
 
 ![PACELC Theoerm](PACELC_Theorem.png)
 
+## References
+
+- [CAP Theorem: Revisited](https://robertgreiner.com/cap-theorem-revisited/)
+- [Video: CAP Theorem Simplified by ByteByteGo](https://www.youtube.com/watch?v=BHqjEjzAicA)
