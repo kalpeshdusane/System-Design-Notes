@@ -1,5 +1,5 @@
 
-# System Design Notes
+# System Design Notes  ![InProgress badge](https://img.shields.io/badge/InProgress-green)
 
 Study notes for understanding system design concepts.
 
